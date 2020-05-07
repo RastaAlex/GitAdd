@@ -7,7 +7,7 @@ async function main () {
     await git.commit({ fs, dir, message: 'New commit',author: {name: 'RastaAlex', email: 'Rastaalex86@gmail.com' }});
     await git.push({
         fs,
-        http,
+        http: 'https://github.com/RastaAlex/GitAdd',
         dir: '/tutorial',
         remote: 'origin',
         ref: 'master',
