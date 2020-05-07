@@ -8,7 +8,7 @@ async function main () {
     await git.push({
         fs,
         http: 'https://github.com/RastaAlex/GitAdd',
-        dir: '/tutorial',
+        //dir: '/tutorial',
         remote: 'origin',
         ref: 'master',
     });
