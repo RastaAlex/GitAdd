@@ -2,11 +2,19 @@
   "name": "GitAdd",
   "version": "1.0.0",
   "description": "",
-  "main": "git_add.js",
+  "main": "gitadd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RastaAlex/GitAdd.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RastaAlex/GitAdd/issues"
+  },
+  "homepage": "https://github.com/RastaAlex/GitAdd#readme"
 }
