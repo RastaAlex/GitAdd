@@ -8,17 +8,19 @@ const {parse} = JSON;
         console.log(`some changes in ${filename}`);
         exec.execSync(`git add ${filename}`);
         exec.execSync('git commit -m "New commit"');
-        
+        const [error, result] = tryCatch(parse, 'hello');
+ 
+if (error)
+    console.error(error.message);
+ 
         
     }
     
 });
 
-const [error, result] = tryCatch(parse, 'hello');
-        if (error)
-            console.error(error.message);
 
-const a ='abcdfff';
+
+const a ='abcdfffff';
 
 // async function main() {
 //     await fs.watch('./', event, filename);
