@@ -17,8 +17,8 @@ const {parse} = JSON;
 });
 
 
-c
-const a ='abcdfffff';
+
+const a ='abcdffff';
 
 // async function main() {
 //     await fs.watch('./', event, filename);
