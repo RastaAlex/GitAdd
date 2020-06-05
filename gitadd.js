@@ -1,31 +1,18 @@
 const fs = require('fs');
 const exec = require('child_process');
 const tryCatch = require('try-catch');
+const git = require('simple-git/promise');
 
+const a ='abcdffffff';
 
-    fs.watch('./', (event, filename) => {
-    if (event === 'change' && filename === 'gitadd.js') {
-        console.log(`some changes in ${filename}`);
-        exec.execSync(`git add ${filename}`);
-        const [error, result] = tryCatch(exec.execSync('git commit -m "New commit"'), 'hello');
-        
-        
-    }
-});
+ async function main() {
+    git().add('./*');
+    git().commit('new commit');
+    git().push('origin', 'master');
+     
+         
+ }
 
-
-
-const a ='abcdfffff';
-
-// async function main() {
-//     await fs.watch('./', event, filename);
-//     if (event === 'change' && filename === 'gitadd.js') {
-//         console.log(`some changes in ${filename}`)};
-//     await exec.execSync(`git add ${filename}`);
-//     await exec.execSync('git commit -m "New commit"');
-
-// }
-
-// main().catch((err) => console.log(err.message));
+ main().catch((err) => console.log(err.message));
 
 

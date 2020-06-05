@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/RastaAlex/GitAdd/issues"
   },
-  "homepage": "https://github.com/RastaAlex/GitAdd#readme"
+  "homepage": "https://github.com/RastaAlex/GitAdd#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "simple-git": "^2.5.0",
+    "try-catch": "^3.0.0"
+  }
 }
