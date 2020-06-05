@@ -6,13 +6,13 @@ const tryCatch = require('try-catch');
     fs.watch('./', (event, filename) => {
     if (event === 'change' && filename === 'gitadd.js') {
         console.log(`some changes in ${filename}`);
-        tryCatch(exec.execSync(`git add ${filename}`),
-        exec.execSync('git commit -m "New commit"'));
+        exec.execSync(`git add ${filename}`);
+        exec.execSync('git commit -m "New commit"');
         
     }
 });
 
-const a ='abcdfffffffff';
+const a ='abcdfffffff';
 
 // async function main() {
 //     await fs.watch('./', event, filename);
