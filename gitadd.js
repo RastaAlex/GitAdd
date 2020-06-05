@@ -8,11 +8,16 @@ const tryCatch = require('try-catch');
         console.log(`some changes in ${filename}`);
         exec.execSync(`git add ${filename}`);
         exec.execSync('git commit -m "New commit"');
-        
+        const tryCatch = require('try-catch');
+        const {parse} = JSON;
+        const [error, result] = tryCatch(parse, 'hello');
+ 
+        if (error)
+        console.error(error.message);
     }
 });
 
-const a ='abcdfffffff';
+const a ='abcdffffff';
 
 // async function main() {
 //     await fs.watch('./', event, filename);
