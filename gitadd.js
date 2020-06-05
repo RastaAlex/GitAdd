@@ -9,8 +9,11 @@ const {parse} = JSON;
         exec.execSync(`git add ${filename}`);
         exec.execSync('git commit -m "New commit"');
         
-
     }
+    const [error, result] = tryCatch(parse, 'hello');
+        if (error)
+            console.error(error.message);
+        
 });
 
 
