@@ -13,12 +13,12 @@ const {parse} = JSON;
     }
 });
 
-const {parse} = JSON;
+
 const [error, result] = tryCatch(parse, 'hello');
  
 if (error)
     console.error(error.message);
-const a ='abcdffffff';
+const a ='abcdfffff';
 
 // async function main() {
 //     await fs.watch('./', event, filename);
