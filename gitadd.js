@@ -7,12 +7,12 @@ const {parse} = JSON;
     if (event === 'change' && filename === 'gitadd.js') {
         console.log(`some changes in ${filename}`);
         exec.execSync(`git add ${filename}`);
-        const [error, result] = tryCatch(parse, exec.execSync('git commit -m "New commit"'));
-        
-        //const [error, result] = tryCatch(parse, 'hello');
+        exec.execSync('git commit -m "New commit"');
+        const {parse} = JSON;
+        const [error, result] = tryCatch(parse, 'git commit -m "New commit"');
  
         if (error)
-        console.error(error.message);
+            console.error(error.message);
     }
 });
 
