@@ -11,7 +11,11 @@ fs.watch('./', (event, filename) => {
        const[err, res] = tryCatch(exec.execSync,'git commit -m "New commit"');
          if(err)
             console.error(err.message);
+       const [er, rs] = tryCatch(exec.execSync, 'git push origin master');
+         if(er)
+            console.error(er.message);     
       }
+
 });
 
-const abc = 'abcdv';
+const abc = 'abcdvv';
