@@ -18,4 +18,18 @@ fs.watch('./', (event, filename) => {
 
 });
 
-const abc = 'abcd';
+const abc = 'abc';
+
+// $ node gitadd.js
+// some changes in gitadd.js
+// To https://github.com/RastaAlex/GitAdd
+//    24b331c..433afc5  master -> master
+// some changes in gitadd.js
+// To https://github.com/RastaAlex/GitAdd
+//    433afc5..51ec8c1  master -> master
+// some changes in gitadd.js
+// Command failed: git commit -m "New commit"
+// Everything up-to-date
+// some changes in gitadd.js
+// Command failed: git commit -m "New commit"
+// Everything up-to-date
