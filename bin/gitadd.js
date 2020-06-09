@@ -1,16 +1,21 @@
 'use strict';
 
 const fs = require('fs');
-const git = require('simple-git/promise');
+const exec = require('child_process');
+const tryCatch = require('try-catch');
 
-async function main() {
-    await git().add('./*');
-    await git().commit('new commit');
-    await git().push('origin', 'master');
+function main() {
+    exec.execSync( 'git add gitadd.js');
+    exec.execSync('git commit -m "New commit"');
+    exec.execSync('git push origin master');
 }
 
-fs.watch('./', (event) => {
-    if (event === 'change') {
-        main().catch((err) => console.log(err.message));
+fs.watch('./', (event, filename) => {
+    if (event === 'change' && filename === 'gitadd.js') {
+        const error = tryCatch(main);
+        
+        if (error) {
+            console.error(error.message);
+        }
     }
 });
