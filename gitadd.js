@@ -12,4 +12,3 @@ fs.watch('./', (event, filename) => {
     }
 });
 
-a
