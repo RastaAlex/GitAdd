@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const git = require('simple-git/promise');
 
 async function main() {
@@ -8,4 +9,8 @@ async function main() {
     await git().push('origin', 'master');
 }
 
-main().catch((err) => console.log(err.message));
+fs.watch('./', (event) => {
+    if (event === 'change') {
+        main().catch((err) => console.log(err.message));
+    }
+});
