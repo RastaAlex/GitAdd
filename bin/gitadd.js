@@ -20,14 +20,3 @@ fs.watch('./', (event, filename) => {
     }
 });
 
-// $ node gitadd.js
-// To https://github.com/RastaAlex/GitAdd
-//    b80ced9..b164509  master -> master
-// undefined
-// warning: LF will be replaced by CRLF in bin/gitadd.js.
-// The file will have its original line endings in your working directory
-// To https://github.com/RastaAlex/GitAdd
-//    b164509..f4fd101  master -> master
-// undefined
-// undefined
-// undefined
